@@ -1,0 +1,36 @@
+{
+  "name": "react-india-demo",
+  "version": "0.1.0",
+  "description": "Gluestack V2 App",
+  "main": "glue",
+  "scripts": {
+    "install:all": "npm install --workspaces --if-present"
+  },
+  "keywords": [
+    "gluestack",
+    "v2",
+    "fullstack",
+    "framework",
+    "cli",
+    "mobile",
+    "web",
+    "storybook",
+    "shared-components"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^18.15.5"
+  },
+  "workspaces": [
+    "client/web",
+    ".glue/__generated__/packages/**"
+  ],
+  "dependencies": {
+    "@gluestack-v2/framework-cli": "latest",
+    "@gluestack-v2/glue-plugin-develop": "^0.1.6",
+    "@gluestack-v2/glue-plugin-functions": "^0.1.6",
+    "@gluestack-v2/glue-plugin-sdk": "^0.1.7",
+    "@gluestack-v2/glue-plugin-service-gateway": "^0.1.5",
+    "@gluestack-v2/glue-plugin-web": "latest"
+  }
+}
