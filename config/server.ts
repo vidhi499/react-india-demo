@@ -1,3 +1,7 @@
+import databaseclientServer from "@project/databaseclient-server-sdk";
+
 export const config = {
-  providers: {},
+  providers: {
+    databaseclient: databaseclientServer,
+  },
 };
