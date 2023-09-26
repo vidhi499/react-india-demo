@@ -24,7 +24,8 @@
   "workspaces": [
     "client/web",
     ".glue/__generated__/packages/**",
-    "server/functions"
+    "server/functions",
+    ".glue/__generated__/services/gateway/src/gateway"
   ],
   "dependencies": {
     "@gluestack-v2/framework-cli": "latest",
