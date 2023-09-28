@@ -1,0 +1,257 @@
+npm ERR! code ENOWORKSPACES
+npm ERR! This command does not support workspaces.
+
+npm ERR! A complete log of this run can be found in: /Users/vidhikataria/.npm/_logs/2023-09-28T07_44_51_483Z-debug-0.log
+- warn Your project has `@next/font` installed as a dependency, please use the built-in `next/font` instead. The `@next/font` package will be removed in Next.js 14. You can migrate by running `npx @next/codemod@latest built-in-next-font .`. Read more: https://nextjs.org/docs/messages/built-in-next-font
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+accessibilityRole is deprecated. Use role.
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
+accessibilityRole is deprecated. Use role.
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+accessibilityRole is deprecated. Use role.
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+accessibilityRole is deprecated. Use role.
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+accessibilityRole is deprecated. Use role.
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+accessibilityRole is deprecated. Use role.
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+accessibilityRole is deprecated. Use role.
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
+
+Import trace for requested module:
+../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
+../../../../packages/dbclient-client-sdk/build/index.js
+../../../../packages/client-config/build/client-config/client.js
+../../../../packages/client-config/build/index.js
+../../../../packages/client-sdk/build/index.js
+accessibilityRole is deprecated. Use role.

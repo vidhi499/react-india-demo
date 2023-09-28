@@ -1,0 +1,13 @@
+{
+  "name": "web",
+  "private": true,
+  "workspaces": [
+    "web",
+    "packages/**"
+  ],
+  "scripts": {
+    "install:all": "npm install --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "dev": "npm run dev --workspace @project/web"
+  }
+}

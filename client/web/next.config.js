@@ -1,7 +1,14 @@
 /** @type {import('next').NextConfig} */
-const webpack = require("webpack");
+const { withGluestackUI } = require("@gluestack/ui-next-adapter");
+
 const nextConfig = {
   reactStrictMode: true,
-}
+  transpilePackages: [
+    "@gluestack-ui/themed",
+    "react-native",
+    "react-native-web",
+    "react-native-svg",
+  ],
+};
 
-module.exports = nextConfig
+module.exports = withGluestackUI(nextConfig);

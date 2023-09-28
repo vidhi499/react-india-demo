@@ -1,0 +1,43 @@
+{
+  "name": "@project/gateway",
+  "version": "1.0.0",
+  "description": "My Moleculer-based microservices project",
+  "scripts": {
+    "dev": "NODE_OPTIONS=--enable-source-maps moleculer-runner --hot services services/**/*.service.js",
+    "start": "moleculer-runner",
+    "cli": "moleculer connect NATS",
+    "ci": "jest --watch",
+    "test": "jest --coverage"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "jest": "^27.5.1",
+    "jest-cli": "^27.5.1",
+    "moleculer-repl": "^0.7.3",
+    "minio": "latest"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "minio": "^7.1.0",
+    "moleculer": "0.14.29",
+    "moleculer-web": "0.10.5",
+    "nats": "^2.7.1",
+    "prisma": "latest",
+    "@prisma/client": "latest"
+  },
+  "engines": {
+    "node": ">= 16.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}

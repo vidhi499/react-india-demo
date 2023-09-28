@@ -1,0 +1,15 @@
+envfile: .env.tpl
+project_id: "1695825856584"
+project_name: services
+services:
+  postgres:
+    path: postgres/src/postgres
+  gateway:
+    path: gateway/src/gateway
+  minio:
+    path: minio/src/minio
+  web:
+    path: web/src/web
+ingress: null
+vm:
+  name: services

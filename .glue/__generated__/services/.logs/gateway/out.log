@@ -1,0 +1,39 @@
+
+> @project/gateway@1.0.0 dev
+> NODE_OPTIONS=--enable-source-maps moleculer-runner --hot services services/**/*.service.js
+
+[2023-09-28T07:44:43.293Z] INFO  vidhis-macbook-air.local-1860/BROKER: Moleculer v0.14.29 is starting...
+[2023-09-28T07:44:43.294Z] INFO  vidhis-macbook-air.local-1860/BROKER: Namespace: <not defined>
+[2023-09-28T07:44:43.294Z] INFO  vidhis-macbook-air.local-1860/BROKER: Node ID: vidhis-macbook-air.local-1860
+[2023-09-28T07:44:43.294Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: Strategy: RoundRobinStrategy
+[2023-09-28T07:44:43.294Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: Discoverer: LocalDiscoverer
+[2023-09-28T07:44:43.295Z] INFO  vidhis-macbook-air.local-1860/BROKER: Serializer: JSONSerializer
+[2023-09-28T07:44:43.309Z] INFO  vidhis-macbook-air.local-1860/BROKER: Validator: FastestValidator
+[2023-09-28T07:44:43.309Z] INFO  vidhis-macbook-air.local-1860/BROKER: Registered 14 middleware(s).
+[2023-09-28T07:44:43.403Z] INFO  vidhis-macbook-air.local-1860/API: API Gateway server created.
+[2023-09-28T07:44:43.403Z] INFO  vidhis-macbook-air.local-1860/API: Register route to '/api'
+[2023-09-28T07:44:43.423Z] INFO  vidhis-macbook-air.local-1860/API:   Registered 1 middlewares.
+[2023-09-28T07:44:43.423Z] INFO  vidhis-macbook-air.local-1860/API: ♻ Generate aliases for '/api' route...
+[2023-09-28T07:44:43.424Z] INFO  vidhis-macbook-air.local-1860/API: 
+DbClient ServerSDK instance initialized
+ServerSDK instance initialized
+[2023-09-28T07:44:43.552Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: '$node' service is registered.
+[2023-09-28T07:44:43.555Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: 'storage' service is registered.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/$NODE: Service '$node' started.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: 'dbclient' service is registered.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: 'functions' service is registered.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: 'greeter' service is registered.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/REGISTRY: 'private' service is registered.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/STORAGE: Service 'storage' started.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/DBCLIENT: Service 'dbclient' started.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/FUNCTIONS: Service 'functions' started.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/GREETER: Service 'greeter' started.
+[2023-09-28T07:44:43.556Z] INFO  vidhis-macbook-air.local-1860/PRIVATE: Service 'private' started.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/$NODE: Service '$node' stopped.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/API: Service 'api' stopped.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/DBCLIENT: Service 'dbclient' stopped.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/FUNCTIONS: Service 'functions' stopped.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/GREETER: Service 'greeter' stopped.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/PRIVATE: Service 'private' stopped.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/STORAGE: Service 'storage' stopped.
+[2023-09-28T07:44:43.661Z] INFO  vidhis-macbook-air.local-1860/BROKER: ServiceBroker is stopped. Good bye.

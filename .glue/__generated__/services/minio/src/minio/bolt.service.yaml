@@ -1,0 +1,18 @@
+container_name: minio
+stateless: true
+default_service_runner: docker
+service_discovery_offset:
+  - 9160
+supported_service_runners:
+  - docker
+service_runners:
+  local:
+    envfile: .env
+    build: npm run install --workspaces --if-present && npm run dev
+  docker:
+    envfile: .env
+    build: ./run.Dockerfile
+    ports:
+      - 10310:9000
+      - 9160:9001
+

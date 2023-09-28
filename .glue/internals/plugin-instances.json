@@ -2,7 +2,7 @@
   "@gluestack-v2/glue-plugin-develop": [
     {
       "instance": "develop",
-      "directory": "develop",
+      "directory": "./develop",
       "container_store": {}
     }
   ],
@@ -13,10 +13,38 @@
       "container_store": {}
     }
   ],
-  "@gluestack-v2/glue-plugin-service-gateway": [
+  "@gluestack-v2/glue-plugin-web": [
     {
-      "instance": "gateway",
-      "directory": "gateway",
+      "instance": "web",
+      "directory": "./client/web",
+      "container_store": {}
+    }
+  ],
+  "@gluestack-v2/glue-plugin-database": [
+    {
+      "instance": "postgres",
+      "directory": "server/postgres",
+      "container_store": {}
+    }
+  ],
+  "@gluestack-v2/glue-plugin-database-client": [
+    {
+      "instance": "dbclient",
+      "directory": "server/dbclient",
+      "container_store": {}
+    }
+  ],
+  "@gluestack-v2/glue-plugin-storage": [
+    {
+      "instance": "minio",
+      "directory": "server/minio",
+      "container_store": {}
+    }
+  ],
+  "@gluestack-v2/glue-plugin-storage-client": [
+    {
+      "instance": "storageclient",
+      "directory": "./server/storageclient",
       "container_store": {}
     }
   ],
@@ -27,17 +55,10 @@
       "container_store": {}
     }
   ],
-  "@gluestack-v2/glue-plugin-database": [
+  "@gluestack-v2/glue-plugin-service-gateway": [
     {
-      "instance": "database",
-      "directory": "server/database",
-      "container_store": {}
-    }
-  ],
-  "@gluestack-v2/glue-plugin-database-client": [
-    {
-      "instance": "databaseclient",
-      "directory": "server/databaseclient",
+      "instance": "gateway",
+      "directory": "gateway",
       "container_store": {}
     }
   ]
