@@ -2,19 +2,19 @@
 > @project/gateway@1.0.0 dev
 > NODE_OPTIONS=--enable-source-maps moleculer-runner --hot services services/**/*.service.js
 
-[2023-09-29T11:52:38.653Z] INFO  vidhis-macbook-air.local-95852/BROKER: Moleculer v0.14.29 is starting...
-[2023-09-29T11:52:38.653Z] INFO  vidhis-macbook-air.local-95852/BROKER: Namespace: <not defined>
-[2023-09-29T11:52:38.654Z] INFO  vidhis-macbook-air.local-95852/BROKER: Node ID: vidhis-macbook-air.local-95852
-[2023-09-29T11:52:38.654Z] INFO  vidhis-macbook-air.local-95852/REGISTRY: Strategy: RoundRobinStrategy
-[2023-09-29T11:52:38.654Z] INFO  vidhis-macbook-air.local-95852/REGISTRY: Discoverer: LocalDiscoverer
-[2023-09-29T11:52:38.655Z] INFO  vidhis-macbook-air.local-95852/BROKER: Serializer: JSONSerializer
-[2023-09-29T11:52:38.775Z] INFO  vidhis-macbook-air.local-95852/BROKER: Validator: FastestValidator
-[2023-09-29T11:52:38.776Z] INFO  vidhis-macbook-air.local-95852/BROKER: Registered 14 middleware(s).
-[2023-09-29T11:52:39.079Z] INFO  vidhis-macbook-air.local-95852/API: API Gateway server created.
-[2023-09-29T11:52:39.079Z] INFO  vidhis-macbook-air.local-95852/API: Register route to '/api'
-[2023-09-29T11:52:39.127Z] INFO  vidhis-macbook-air.local-95852/API:   Registered 1 middlewares.
-[2023-09-29T11:52:39.129Z] INFO  vidhis-macbook-air.local-95852/API:     POST /api/upload => <Function>
-[2023-09-29T11:52:39.129Z] INFO  vidhis-macbook-air.local-95852/API: ♻ Generate aliases for '/api' route...
-[2023-09-29T11:52:39.129Z] INFO  vidhis-macbook-air.local-95852/API: 
+[2023-09-29T14:49:37.271Z] INFO  vidhis-macbook-air.local-44426/BROKER: Moleculer v0.14.29 is starting...
+[2023-09-29T14:49:37.272Z] INFO  vidhis-macbook-air.local-44426/BROKER: Namespace: <not defined>
+[2023-09-29T14:49:37.272Z] INFO  vidhis-macbook-air.local-44426/BROKER: Node ID: vidhis-macbook-air.local-44426
+[2023-09-29T14:49:37.272Z] INFO  vidhis-macbook-air.local-44426/REGISTRY: Strategy: RoundRobinStrategy
+[2023-09-29T14:49:37.272Z] INFO  vidhis-macbook-air.local-44426/REGISTRY: Discoverer: LocalDiscoverer
+[2023-09-29T14:49:37.273Z] INFO  vidhis-macbook-air.local-44426/BROKER: Serializer: JSONSerializer
+[2023-09-29T14:49:37.288Z] INFO  vidhis-macbook-air.local-44426/BROKER: Validator: FastestValidator
+[2023-09-29T14:49:37.289Z] INFO  vidhis-macbook-air.local-44426/BROKER: Registered 14 middleware(s).
+[2023-09-29T14:49:37.409Z] INFO  vidhis-macbook-air.local-44426/API: API Gateway server created.
+[2023-09-29T14:49:37.409Z] INFO  vidhis-macbook-air.local-44426/API: Register route to '/api'
+[2023-09-29T14:49:37.430Z] INFO  vidhis-macbook-air.local-44426/API:   Registered 1 middlewares.
+[2023-09-29T14:49:37.431Z] INFO  vidhis-macbook-air.local-44426/API:     POST /api/upload => <Function>
+[2023-09-29T14:49:37.431Z] INFO  vidhis-macbook-air.local-44426/API: ♻ Generate aliases for '/api' route...
+[2023-09-29T14:49:37.431Z] INFO  vidhis-macbook-air.local-44426/API: 
 DbClient ServerSDK instance initialized
 ServerSDK instance initialized

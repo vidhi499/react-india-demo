@@ -1,8 +1,9 @@
 npm ERR! code ENOWORKSPACES
 npm ERR! This command does not support workspaces.
 
-npm ERR! A complete log of this run can be found in: /Users/vidhikataria/.npm/_logs/2023-09-29T11_52_46_553Z-debug-0.log
+npm ERR! A complete log of this run can be found in: /Users/vidhikataria/.npm/_logs/2023-09-29T14_49_43_142Z-debug-0.log
 <w> [webpack.cache.PackFileCacheStrategy] Restoring pack failed from /Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/.next/cache/webpack/server-development.pack.gz: Error: incorrect header check
+<w> [webpack.cache.PackFileCacheStrategy] Restoring pack failed from /Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/.next/cache/webpack/client-development.pack.gz: Error: incorrect header check
 - warn Your project has `@next/font` installed as a dependency, please use the built-in `next/font` instead. The `@next/font` package will be removed in Next.js 14. You can migrate by running `npx @next/codemod@latest built-in-next-font .`. Read more: https://nextjs.org/docs/messages/built-in-next-font
 - [33mwarn[39m ../../../../../../node_modules/@gluestack-v2/framework-cli/build/plugin/ServiceProvider.js
 Critical dependency: require function is used in a way in which dependencies cannot be statically extracted
@@ -13,4 +14,5 @@ Import trace for requested module:
 ../../../../packages/client-config/build/client-config/client.js
 ../../../../packages/client-config/build/index.js
 ../../../../packages/client-sdk/build/index.js
+- [33mwarn[39m Fast Refresh had to perform a full reload. Read more: https://nextjs.org/docs/messages/fast-refresh-reload
 accessibilityRole is deprecated. Use role.

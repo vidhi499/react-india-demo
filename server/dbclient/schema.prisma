@@ -15,3 +15,11 @@ model User {
   status    Boolean
   createdAt DateTime @default(now())
 }
+
+model Files {
+  id        String   @id @default(uuid()) @db.VarChar(36)
+  name      String   @db.VarChar(255)
+  content   String?
+  path      String
+  createdAt DateTime @default(now())
+}

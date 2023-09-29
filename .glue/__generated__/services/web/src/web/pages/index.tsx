@@ -162,13 +162,14 @@ const Example = () => {
 
     try {
       console.log(file)
+      await ClientSDK
       // const response: any = await ClientSDK.functions?.upload(file)
-      const response = await fetch('http://localhost:3003/api/upload', {
-        method: 'POST',
-        body: formData,
-      });
+      // const response = await fetch('http://localhost:3003/api/upload', {
+      //   method: 'POST',
+      //   body: formData,
+      // });
 
-      console.log(JSON.stringify(response), "Uploaded")
+      // console.log(JSON.stringify(response), "Uploaded")
       // if (response.ok) {
       //   console.log('File uploaded successfully.');
       // } else {

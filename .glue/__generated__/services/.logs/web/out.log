@@ -1,5 +1,5 @@
 
-up to date, audited 1425 packages in 3s
+up to date, audited 1425 packages in 2s
 
 170 packages are looking for funding
   run `npm fund` for details
@@ -12,14 +12,15 @@ To address all issues, run:
 Run `npm audit` for details.
 
 > @project/web@0.0.1 dev
-> next dev --port 3001
+> next dev --port 3000
 
 - info Loaded env from /Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/.env
-- [32mready[39m started server on [::]:3001, url: http://localhost:3001
-- [35mevent[39m compiled client and server successfully in 148 ms (18 modules)
+- [32mready[39m started server on [::]:3000, url: http://localhost:3000
+- [35mevent[39m compiled client and server successfully in 130 ms (18 modules)
 - [36mwait[39m compiling...
-- [35mevent[39m compiled client and server successfully in 129 ms (18 modules)
+- [35mevent[39m compiled client and server successfully in 115 ms (18 modules)
 - [36minfo[39m Loaded env from /Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/.env
 - [36minfo[39m Loaded env from /Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/.env
 - [36mwait[39m compiling / (client and server)...
+- [36mwait[39m compiling /_error (client and server)...
 ServerSDK instance initialized
