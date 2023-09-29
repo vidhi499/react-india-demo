@@ -141,7 +141,7 @@ const Example = () => {
       // console.log(awaits ClientSDK.functions.upload())
       console.log("after")
 
-      console.log(await ClientSDK.functions.newFunc(event.target.files[0]))
+      // console.log(await ClientSDK.functions.newFunc(event.target.files[0]))
       // minio(event.target.files[0])
     }
   };
@@ -157,25 +157,31 @@ const Example = () => {
       alert('Please select a file.');
       return;
     }
-    console.log(file, JSON.stringify(file))
     const formData = new FormData();
     formData.append('file', file);
 
     try {
-      const response = await fetch('/api/upload', {
+      console.log(file)
+      // const response: any = await ClientSDK.functions?.upload(file)
+      const response = await fetch('http://localhost:3003/api/upload', {
         method: 'POST',
         body: formData,
       });
 
-      if (response.ok) {
-        console.log('File uploaded successfully.');
-      } else {
-        console.error('File upload failed.');
-      }
+      console.log(JSON.stringify(response), "Uploaded")
+      // if (response.ok) {
+      //   console.log('File uploaded successfully.');
+      // } else {
+      //   console.error('File upload failed.');
+      // }
     } catch (error) {
       console.error('Error uploading file:', error);
     }
   };
+
+  async function minioTest() {
+    // console.log(await ClientSDK.functions?.upload())
+  }
 
   return (
     <div className={styles.container}>
@@ -208,6 +214,9 @@ const Example = () => {
         </Button>
         <Button onPress={db}>
           <ButtonText>DB</ButtonText>
+        </Button>
+        <Button onPress={minioTest}>
+          <ButtonText>TEST</ButtonText>
         </Button>
         <div className={styles.grid}>
           <FeatureCard

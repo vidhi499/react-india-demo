@@ -12,5 +12,3 @@ const nextConfig = {
 };
 
 module.exports = withGluestackUI(nextConfig);
-
-//# sourceMappingURL=/Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/next.config.js.map

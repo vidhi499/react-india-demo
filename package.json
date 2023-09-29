@@ -22,7 +22,6 @@
     "@types/node": "^18.15.5"
   },
   "workspaces": [
-    "../../packages/*",
     "client/web",
     "server/functions",
     ".glue/__generated__/packages/**",
@@ -32,9 +31,9 @@
     "@gluestack-v2/glue-plugin-database": "^0.1.5",
     "@gluestack-v2/glue-plugin-database-client": "^0.1.4",
     "@gluestack-v2/glue-plugin-develop": "latest",
-    "@gluestack-v2/glue-plugin-functions": "^0.1.7",
+    "@gluestack-v2/glue-plugin-functions": "^0.1.9",
     "@gluestack-v2/glue-plugin-sdk": "^0.1.9",
-    "@gluestack-v2/glue-plugin-service-gateway": "^0.1.8",
+    "@gluestack-v2/glue-plugin-service-gateway": "^0.1.11",
     "@gluestack-v2/glue-plugin-storage": "^0.1.0",
     "@gluestack-v2/glue-plugin-storage-client": "^0.1.1",
     "@gluestack-v2/glue-plugin-web": "^0.1.8"

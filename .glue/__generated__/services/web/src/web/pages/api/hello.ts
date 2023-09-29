@@ -11,5 +11,3 @@ export default function handler(
 ) {
   res.status(200).json({ name: 'John Doe' })
 }
-
-//# sourceMappingURL=/Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/pages/api/hello.ts.map

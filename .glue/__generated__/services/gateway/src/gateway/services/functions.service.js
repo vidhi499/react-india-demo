@@ -6,8 +6,6 @@
  /** @type {ServiceSchema} */
 
  const addHandler = require("../functions/add.ts");
-const newFuncHandler = require("../functions/newFunc.ts");
-const uploadHandler = require("../functions/upload.ts");
 const Context = require("../Context.ts");
 
 
@@ -34,20 +32,6 @@ const Context = require("../Context.ts");
       "path": "/add"
     },
     "handler": (ctx) => {const context = new Context(ctx); return addHandler(context);},
-  },
-  "newFunc": {
-    "rest": {
-      "method": "POST",
-      "path": "/newFunc"
-    },
-    "handler": (ctx) => {const context = new Context(ctx); return newFuncHandler(context);},
-  },
-  "upload": {
-    "rest": {
-      "method": "POST",
-      "path": "/upload"
-    },
-    "handler": (ctx) => {const context = new Context(ctx); return uploadHandler(context);},
   }
 },
 
