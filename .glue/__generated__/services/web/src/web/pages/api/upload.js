@@ -23,3 +23,5 @@ export default async function handler(req, res) {
       .json({ error: "File upload failed", details: error.message });
   }
 }
+
+//# sourceMappingURL=/Users/vidhikataria/Desktop/react-india-demo/.glue/__generated__/services/web/src/web/pages/api/upload.js.map

@@ -17,39 +17,16 @@ const Meta = () => {
   );
 };
 
-const FeatureCard = ({ iconSvg, name, desc }: any) => {
-  return (
-    <div className={styles.card}>
-      <div>
-        <Image
-          src={`/${iconSvg}`}
-          alt="document"
-          width={22}
-          height={22}
-          priority
-        />
-        <h3>{name}</h3>
-      </div>
-      <p>{desc}</p>
-    </div>
-  );
-};
+
 
 const Example = () => {
-  const [image, setImage] = useState(null);
-  const [createObjectURL, setCreateObjectURL] = useState(null);
 
+  const [name, setName] = useState("");
+  const [githubId, setGithubId] = useState("");
 
-  const [file, setFile] = useState(null);
-  const [value, setValue] = useState("");
-
-
-  const handleFileChange = (event: any) => {
-    const selectedFile = event.target.files[0];
-    setFile(selectedFile);
-  };
-
-  function handleUpload(event: any) { }
+  function handleUpload(event: any) {
+    console.log(name, githubId)
+  }
 
 
 
@@ -62,15 +39,6 @@ const Example = () => {
         <p className={styles.badge}>
           Get started by editing <code>pages/index.tsx</code>
         </p>
-        <input
-          type="file"
-          name="myImage"
-          onChange={handleFileChange}
-          style={{
-            height: 100,
-            width: 200,
-          }}
-        />
         <Input
           variant="outline"
           size="md"
@@ -78,9 +46,20 @@ const Example = () => {
           isInvalid={false}
           isReadOnly={false}
         >
-          <InputField value={value} onChange={(e: any) => {
-            setValue(e.target.value);
-          }} placeholder="Enter Text here" />
+          <InputField color={"$white"} value={name} onChange={(e: any) => {
+            setName(e.target.value);
+          }} placeholder="Enter Name here" />
+        </Input>
+        <Input
+          variant="outline"
+          size="md"
+          isDisabled={false}
+          isInvalid={false}
+          isReadOnly={false}
+        >
+          <InputField color={"$white"} value={githubId} onChange={(e: any) => {
+            setGithubId(e.target.value);
+          }} placeholder="Enter Github here" />
         </Input>
         <button onClick={handleUpload}>Upload File</button>
 
@@ -88,23 +67,6 @@ const Example = () => {
           <Image src="/logo.svg" fill alt="logo" priority />
         </div>
 
-        <div className={styles.grid}>
-          <FeatureCard
-            iconSvg="document-data.svg"
-            name="Docs"
-            desc="Find in-depth information about gluestack features and API."
-          />
-          <FeatureCard
-            iconSvg="lightbulb-person.svg"
-            name="Learn"
-            desc="Learn about gluestack in an interactive course with quizzes!"
-          />
-          <FeatureCard
-            iconSvg="rocket.svg"
-            name="Deploy"
-            desc="Instantly drop your gluestack site to a shareable URL with vercel."
-          />
-        </div>
       </main>
     </div>
   );
