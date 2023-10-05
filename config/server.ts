@@ -5,7 +5,5 @@ export const config = {
   providers: {
     dbclient: dbclientServer,
     storageclient: storageclientServer,
-
-    storageclient: storageclientServer,
   },
 };

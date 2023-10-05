@@ -2,7 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
 import styles from "@/styles/Home.module.css";
-import { Button, ButtonText } from "@gluestack-ui/themed";
+import { Button, ButtonText, Input, InputField } from "@gluestack-ui/themed";
 import ClientSDK from "@project/client-sdk";
 import { useState } from "react";
 
@@ -43,28 +43,29 @@ const Example = () => {
     console.log(await ClientSDK.functions?.add(2, 4));
   }
   async function db() {
-    console.log(
-      await ClientSDK.dbclient?.user.create({
-        data: {
-          title: "elsa@prisma.io",
-          votes: 10,
-          status: false,
-        },
-      })
-    );
+
+    const response = await ClientSDK.dbclient?.user.create({
+      data: {
+        name: "Vidhi Kataria",
+        email: "katariavidhi99@gmail.com",
+        votes: 10,
+        status: false,
+      },
+    })
+    console.log(response);
   }
   async function minio(data: any) {
-    console.log(
-      await ClientSDK.storageclient.putObject([
-        "mybucket",
-        "images/Black-and-Gold-PowerPoint-Presentation-Slide.jpg",
-        "/public/test.png",
-        {
-          'Content-Type': 'image/jpeg',
-          size: 1037143
-        }
-      ])
-    );
+
+    const response = await ClientSDK.storageclient.putObject([
+      "mybucket",
+      "images/Black-and-Gold-PowerPoint-Presentation-Slide.jpg",
+      "/public/test.png",
+      {
+        'Content-Type': 'image/jpeg',
+        size: 1037143
+      }
+    ])
+    console.log(response);
     // console.log(data)
     // if (data) {
     //   var fileBuffer = Buffer.from("", data)
@@ -146,6 +147,8 @@ const Example = () => {
     }
   };
   const [file, setFile] = useState(null);
+  const [value, setValue] = useState("");
+
 
   const handleFileChange = (event: any) => {
     const selectedFile = event.target.files[0];
@@ -161,20 +164,26 @@ const Example = () => {
     formData.append('file', file);
 
     try {
-      console.log(file)
-      await ClientSDK
-      // const response: any = await ClientSDK.functions?.upload(file)
-      // const response = await fetch('http://localhost:3003/api/upload', {
-      //   method: 'POST',
-      //   body: formData,
-      // });
+      // console.log(file, file.name)
+      // @ts-ignore
+      const key = `uploads/${file.name}`;
 
-      // console.log(JSON.stringify(response), "Uploaded")
-      // if (response.ok) {
-      //   console.log('File uploaded successfully.');
-      // } else {
-      //   console.error('File upload failed.');
-      // }
+      const response = await ClientSDK.dbclient.files.create({
+        data: {
+          name: "Vidhi Kataria",
+          content: "lorem ipsum dolor sit amet, consectetur adip",
+          path: key
+        }
+      })
+      console.log(response)
+
+      const res = await fetch('http://localhost:3003/api/upload', {
+        method: 'POST',
+        body: formData,
+      });
+
+      console.log(JSON.stringify(response), "Uploaded")
+
     } catch (error) {
       console.error('Error uploading file:', error);
     }
@@ -202,6 +211,17 @@ const Example = () => {
             width: 200,
           }}
         />
+        <Input
+          variant="outline"
+          size="md"
+          isDisabled={false}
+          isInvalid={false}
+          isReadOnly={false}
+        >
+          <InputField value={value} onChange={(e: any) => {
+            setValue(e.target.value);
+          }} placeholder="Enter Text here" />
+        </Input>
         <button onClick={handleUpload}>Upload File</button>
 
         <div className={styles.logo}>

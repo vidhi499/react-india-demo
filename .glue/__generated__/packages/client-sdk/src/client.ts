@@ -7,7 +7,5 @@ export const config = {
     dbclient: dbclientClient,
     storageclient: storageclientClient,
     functions: functionsClient,
-
-    storageclient: storageclientClient,
   },
 };
