@@ -17,137 +17,29 @@ const Meta = () => {
   );
 };
 
-const FeatureCard = ({ iconSvg, name, desc }: any) => {
-  return (
-    <div className={styles.card}>
-      <div>
-        <Image
-          src={`/${iconSvg}`}
-          alt="document"
-          width={22}
-          height={22}
-          priority
-        />
-        <h3>{name}</h3>
-      </div>
-      <p>{desc}</p>
-    </div>
-  );
-};
+
 
 const Example = () => {
   const [image, setImage] = useState(null);
   const [createObjectURL, setCreateObjectURL] = useState(null);
 
-  async function test() {
-    console.log(await ClientSDK.functions?.add(2, 4));
-  }
   async function db() {
 
     const response = await ClientSDK.dbclient?.user.create({
       data: {
-        name: "Vidhi Kataria",
-        email: "katariavidhi99@gmail.com",
+        title: "Vidhi Kataria",
         votes: 10,
         status: false,
       },
     })
     console.log(response);
   }
-  async function minio(data: any) {
-
-    const response = await ClientSDK.storageclient.putObject([
-      "mybucket",
-      "images/Black-and-Gold-PowerPoint-Presentation-Slide.jpg",
-      "/public/test.png",
-      {
-        'Content-Type': 'image/jpeg',
-        size: 1037143
-      }
-    ])
-    console.log(response);
-    // console.log(data)
-    // if (data) {
-    //   var fileBuffer = Buffer.from("", data)
-    //   console.log(
-    //     await ClientSDK.storageclient.putObject([
-    //       "mybucket",
-    //       "images/Black-and-Gold-PowerPoint-Presentation-Slide.jpg",
-    //       fileBuffer,
-    //       {
-    //         'Content-Type': 'image/jpeg',
-    //         size: 1037143
-    //       }
-    //     ])
-    //   );
-
-    //   // const reader = new FileReader();
-    //   // console.log("jijiji")
-    //   // reader.onload = async (event: any) => {
-    //   //   const result = event.target.result;
-    //   //   const fileBuffer = Buffer.from(result); // Convert to buffer
-    //   //   console.log(fileBuffer, "BUFFFER")
-    //   //   // Now you have the file as a buffer (fileBuffer) and you can send it to the server or process accordingly
-    //   //   console.log('File as buffer:', fileBuffer);
-    //   //   console.log(data, fileBuffer)
-    //   //   // console.log(await ClientSDK.storageclient.makeBucket([
-    //   //   //   'mynewwbucket', "us-east-1",
-    //   //   // ]))
-
-    //   //   console.log(
-    //   //     await ClientSDK.storageclient.putObject([
-    //   //       "mybucket",
-    //   //       "images/Black-and-Gold-PowerPoint-Presentation-Slide.jpg",
-    //   //       fileBuffer,
-    //   //       {
-    //   //         'Content-Type': 'image/jpeg',
-    //   //         size: 1037143
-    //   //       }
-    //   //     ])
-    //   //   );
-    //   // };
-    //   // reader.onerror = (error) => {
-    //   //   console.error('Error reading the file:', error);
-    //   // };
-
-    // }
 
 
-    // blob:http://localhost:3000/fbb90fd2-c1ab-4558-8aba-6ebf1862442c
-  }
-
-  const uploadToServer = async (event: any) => {
-    if (image != null) {
-      const body = new FormData();
-      body.append("file", image);
-      // const response = await fetch("/api/file", {
-      //   method: "POST",
-      //   body,
-      // });
-    }
-  };
-
-  const uploadToClient = async (event: any) => {
-    if (event.target.files && event.target.files[0]) {
-      const i = event.target.files[0];
-
-      setImage(i);
-      // @ts-ignore
-      setCreateObjectURL(URL.createObjectURL(i));
-      console.log(event.target.files[0], URL.createObjectURL(i), "kokokoko");
-      // const body = new FormData();
-      // body.append("file", event.target.files[0], "knknknk");
-      // ClientSDK.functions.upload()
-      console.log("before")
-      // console.log(awaits ClientSDK.functions.upload())
-      console.log("after")
-
-      // console.log(await ClientSDK.functions.newFunc(event.target.files[0]))
-      // minio(event.target.files[0])
-    }
-  };
   const [file, setFile] = useState(null);
-  const [value, setValue] = useState("");
+  const [name, setName] = useState("");
+  const [githubId, setGithubId] = useState("");
+
 
 
   const handleFileChange = (event: any) => {
@@ -155,43 +47,11 @@ const Example = () => {
     setFile(selectedFile);
   };
 
+
   const handleUpload = async () => {
-    if (!file) {
-      alert('Please select a file.');
-      return;
-    }
-    const formData = new FormData();
-    formData.append('file', file);
-
-    try {
-      // console.log(file, file.name)
-      // @ts-ignore
-      const key = `uploads/${file.name}`;
-
-      const response = await ClientSDK.dbclient.files.create({
-        data: {
-          name: "Vidhi Kataria",
-          content: "lorem ipsum dolor sit amet, consectetur adip",
-          path: key
-        }
-      })
-      console.log(response)
-
-      const res = await fetch('http://localhost:3003/api/upload', {
-        method: 'POST',
-        body: formData,
-      });
-
-      console.log(JSON.stringify(response), "Uploaded")
-
-    } catch (error) {
-      console.error('Error uploading file:', error);
-    }
+    console.log(name, githubId)
   };
 
-  async function minioTest() {
-    // console.log(await ClientSDK.functions?.upload())
-  }
 
   return (
     <div className={styles.container}>
@@ -217,45 +77,26 @@ const Example = () => {
           isDisabled={false}
           isInvalid={false}
           isReadOnly={false}
-        >
-          <InputField value={value} onChange={(e: any) => {
-            setValue(e.target.value);
-          }} placeholder="Enter Text here" />
-        </Input>
-        <button onClick={handleUpload}>Upload File</button>
 
-        <div className={styles.logo}>
-          <Image src="/logo.svg" fill alt="logo" priority />
-        </div>
-        <Button onPress={test}>
-          <ButtonText>Button</ButtonText>
-        </Button>
-        <Button onPress={minio}>
-          <ButtonText>Minio</ButtonText>
-        </Button>
-        <Button onPress={db}>
-          <ButtonText>DB</ButtonText>
-        </Button>
-        <Button onPress={minioTest}>
-          <ButtonText>TEST</ButtonText>
-        </Button>
-        <div className={styles.grid}>
-          <FeatureCard
-            iconSvg="document-data.svg"
-            name="Docs"
-            desc="Find in-depth information about gluestack features and API."
-          />
-          <FeatureCard
-            iconSvg="lightbulb-person.svg"
-            name="Learn"
-            desc="Learn about gluestack in an interactive course with quizzes!"
-          />
-          <FeatureCard
-            iconSvg="rocket.svg"
-            name="Deploy"
-            desc="Instantly drop your gluestack site to a shareable URL with vercel."
-          />
-        </div>
+        >
+          <InputField value={name} onChange={(e: any) => {
+            setName(e.target.value);
+          }} placeholder="Enter Name here" color="$white" />
+        </Input>
+        <Input
+          variant="outline"
+          size="md"
+          isDisabled={false}
+          isInvalid={false}
+          isReadOnly={false}
+        >
+          <InputField value={githubId} onChange={(e: any) => {
+            setGithubId(e.target.value);
+          }} placeholder="Enter github user id here" color="$white" />
+        </Input>
+        <button onClick={handleUpload}>Upload</button>
+
+
       </main>
     </div>
   );

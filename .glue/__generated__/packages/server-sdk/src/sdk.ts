@@ -1,5 +1,4 @@
 import dbclientServer from '@project/dbclient-server-sdk';
-import storageclientServer from '@project/storageclient-server-sdk';
 type AnyClass<T = any> = new (...args: any[]) => T;
 
 type ClassMap = {
@@ -168,10 +167,6 @@ export default class SDK {
 	}
 
 	// **** Add getter functions after this comment ****
-
-	get storageclient(): ReturnType<storageclientServer['getProvider']> | undefined {
-    return this.providers.get('storageclient').getProvider();
-    }
 
 	get dbclient(): ReturnType<dbclientServer['getProvider']> | undefined {
     return this.providers.get('dbclient').getProvider();

@@ -31,7 +31,8 @@ module.exports = {
             {
                 path: '/api',
 
-                whitelist: ["dbclient.**","functions.**","storage.**"],                use: [],
+                whitelist: ["dbclient.**","functions.**"],                // Route-level Express middlewares. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Middlewares
+                use: [],
 
                 // Enable/disable parameter merging method. More info: https://moleculer.services/docs/0.14/moleculer-web.html#Disable-merging
                 mergeParams: true,

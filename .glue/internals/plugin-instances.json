@@ -34,20 +34,8 @@
       "container_store": {}
     }
   ],
-  "@gluestack-v2/glue-plugin-storage": [
-    {
-      "instance": "minio",
-      "directory": "server/minio",
-      "container_store": {}
-    }
-  ],
-  "@gluestack-v2/glue-plugin-storage-client": [
-    {
-      "instance": "storageclient",
-      "directory": "./server/storageclient",
-      "container_store": {}
-    }
-  ],
+  "@gluestack-v2/glue-plugin-storage": [],
+  "@gluestack-v2/glue-plugin-storage-client": [],
   "@gluestack-v2/glue-plugin-functions": [
     {
       "instance": "functions",

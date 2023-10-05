@@ -1,5 +1,4 @@
 import dbclientClient from '@project/dbclient-client-sdk';
-import storageclientClient from '@project/storageclient-client-sdk';
 import functionsClient from '@project/functions-client-sdk';
 type AnyClass<T = any> = new (...args: any[]) => T;
 
@@ -172,10 +171,6 @@ export default class SDK {
 
 	get functions(): ReturnType<functionsClient['getProvider']> | undefined {
     return this.providers.get('functions').getProvider();
-    }
-
-	get storageclient(): ReturnType<storageclientClient['getProvider']> | undefined {
-    return this.providers.get('storageclient').getProvider();
     }
 
 	get dbclient(): ReturnType<dbclientClient['getProvider']> | undefined {

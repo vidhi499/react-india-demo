@@ -9,27 +9,27 @@ import { useEffect, useState } from "react";
 
 const About: NextPage = () => {
   const [data, setData] = useState([])
-  useEffect(() => {
-    async function getData() {
-      const res = await ClientSDK.dbclient.files.findMany()
-      console.log(res)
-      setData(res)
-    }
-    getData()
-  }, [])
+  // useEffect(() => {
+  //   async function getData() {
+  //     const res = await ClientSDK.dbclient.files.findMany()
+  //     console.log(res)
+  //     setData(res)
+  //   }
+  //   getData()
+  // }, [])
 
-  async function getImage(data: any) {
-    return await ClientSDK.storageclient.getObject(["mybucket", data.path, function (err: any, dataStream: any) {
-      if (err) {
-        console.log(err);
-        return;
-      }
-      return dataStream
-    }]);
-  }
+  // async function getImage(data: any) {
+  //   return await ClientSDK.storageclient.getObject(["mybucket", data.path, function (err: any, dataStream: any) {
+  //     if (err) {
+  //       console.log(err);
+  //       return;
+  //     }
+  //     return dataStream
+  //   }]);
+  // }
 
   function test(data: any) {
-    const binaryData: any = getImage(data)
+    // const binaryData: any = getImage(data)
     // const imageUrl = URL.createObjectURL(new Blob(binaryData, { type: "application/png" }))
 
     // const imageElement = document.createElement('img');

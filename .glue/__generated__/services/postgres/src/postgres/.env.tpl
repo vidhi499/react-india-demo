@@ -1,4 +1,3 @@
-
 ASSIGNED_HOST=localhost
 ASSIGNED_PORT=5432
 POSTGRES_USER=gluestack
