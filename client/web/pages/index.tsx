@@ -3,11 +3,11 @@ import Head from "next/head";
 import type { NextPage } from "next";
 import { Box, Heading, Text, Image, VStack } from "@gluestack-ui/themed";
 import { useEffect, useState } from "react";
+import ClientSDK from "@project/client-sdk";
 // https://picsum.photos/v2/list
 const fetchUsers = async () => {
-  const res = await fetch("https://api.github.com/users");
-  const data = await res.json();
-  return data;
+  const res = await ClientSDK.dbclient?.user.findMany();
+  return res;
 };
 const Meta = () => {
   return (
@@ -21,25 +21,25 @@ const Meta = () => {
 };
 const Grid = ({ children }: any) => {
   return (
-    <Box flexDirection="row" flexWrap="wrap" gap={"$10"}>
+    <Box justifyContent="center" flexDirection="row" flexWrap="wrap" gap={"$10"}>
       {children}
     </Box>
   );
 };
 const Container = ({ data }: any) => {
-  console.log(data);
   return (
     <Box
       flex={1}
       bg="$white"
       p="$10"
+      alignItems="center"
       sx={{
         _web: { minHeight: "100vh" },
       }}
     >
-      <Heading size="3xl">React India Github Book</Heading>
+      <Heading size="3xl" mb="$12" textAlign="center" color="$amber500" fontFamily="Homemade Apple">React India Github Book</Heading>
       <Grid>
-        {data.map((item: any) => (
+        {data && data.map((item: any) => (
           <VStack
             space="lg"
             justifyContent="center"
@@ -54,18 +54,26 @@ const Container = ({ data }: any) => {
           >
             <Box overflow="hidden" borderRadius={"$full"} w="200px">
               <img
-                src={item.avatar_url}
+                src={item.githubAvatarUrl}
                 alt="Picture of the author"
-                // width={500}
-                // height={500}
               />
             </Box>
             <Heading color="$amber400" fontFamily="Homemade Apple">
-              {item.login}
+              {item.name}
             </Heading>
-            <Text color="$amber400" fontFamily="Homemade Apple">
-              {`Bs some discription`}
-            </Text>
+            <Box w="100%" px="$8">
+              <Text color="$amber400" fontFamily="monospace">
+                Github: {item.githubId}
+              </Text>
+              {item.content ? <Text color="$amber400" fontFamily="Homemade Apple">
+                <Text color="$amber400" fontFamily="monospace" >Feelings:</Text> {item.content}
+              </Text> : <Text color="$amber400" fontFamily="Homemade Apple">
+                <Text color="$amber400" fontFamily="monospace" >Feelings:</Text> Too busy to share them :|
+              </Text>}
+              {item.emailId && <Text color="$amber400" fontFamily="Homemade Apple">
+                <Text color="$amber400" fontFamily="monospace" >You can reach me on:</Text> {item.emailId}
+              </Text>}
+            </Box>
           </VStack>
         ))}
         {/* <Box w="350px" p="$10" bg="$amber400"></Box> */}

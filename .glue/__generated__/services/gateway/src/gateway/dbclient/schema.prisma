@@ -8,18 +8,11 @@ datasource db {
 }
 
 model User {
-  id        String   @id @default(uuid()) @db.VarChar(36)
-  title     String   @db.VarChar(255)
-  content   String?
-  votes     Int
-  status    Boolean
-  createdAt DateTime @default(now())
-}
-
-model Files {
-  id        String   @id @default(uuid()) @db.VarChar(36)
-  name      String   @db.VarChar(255)
-  content   String?
-  path      String
-  createdAt DateTime @default(now())
+  id              String   @id @default(uuid()) @db.VarChar(36)
+  name            String   @db.VarChar(255)
+  content         String?
+  githubId        String
+  githubAvatarUrl String
+  emailId         String?
+  createdAt       DateTime @default(now())
 }

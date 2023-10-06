@@ -1,11 +1,14 @@
-import type { NextPage } from "next";
 import Head from "next/head";
-import Image from "next/image";
-import styles from "@/styles/Home.module.css";
-import { Button, ButtonText, Input, InputField } from "@gluestack-ui/themed";
+// import Image from "next/image";
+import type { NextPage } from "next";
+import { Box, Heading, Text, Image, VStack } from "@gluestack-ui/themed";
+import { useEffect, useState } from "react";
 import ClientSDK from "@project/client-sdk";
-import { useState } from "react";
-
+// https://picsum.photos/v2/list
+const fetchUsers = async () => {
+  const res = await ClientSDK.dbclient?.user.findMany();
+  return res;
+};
 const Meta = () => {
   return (
     <Head>
@@ -16,67 +19,79 @@ const Meta = () => {
     </Head>
   );
 };
-
-
-
-const Example = () => {
-
-  const [name, setName] = useState("");
-  const [githubId, setGithubId] = useState("");
-
-  function handleUpload(event: any) {
-    console.log(name, githubId)
-  }
-
-
-
+const Grid = ({ children }: any) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.gradient}>
-        <Image src="/gradient.svg" alt="Gradient" fill priority />
-      </div>
-      <main className={styles.main}>
-        <p className={styles.badge}>
-          Get started by editing <code>pages/index.tsx</code>
-        </p>
-        <Input
-          variant="outline"
-          size="md"
-          isDisabled={false}
-          isInvalid={false}
-          isReadOnly={false}
-        >
-          <InputField color={"$white"} value={name} onChange={(e: any) => {
-            setName(e.target.value);
-          }} placeholder="Enter Name here" />
-        </Input>
-        <Input
-          variant="outline"
-          size="md"
-          isDisabled={false}
-          isInvalid={false}
-          isReadOnly={false}
-        >
-          <InputField color={"$white"} value={githubId} onChange={(e: any) => {
-            setGithubId(e.target.value);
-          }} placeholder="Enter Github here" />
-        </Input>
-        <button onClick={handleUpload}>Upload File</button>
-
-        <div className={styles.logo}>
-          <Image src="/logo.svg" fill alt="logo" priority />
-        </div>
-
-      </main>
-    </div>
+    <Box justifyContent="center" flexDirection="row" flexWrap="wrap" gap={"$10"}>
+      {children}
+    </Box>
+  );
+};
+const Container = ({ data }: any) => {
+  return (
+    <Box
+      flex={1}
+      bg="$white"
+      p="$10"
+      alignItems="center"
+      sx={{
+        _web: { minHeight: "100vh" },
+      }}
+    >
+      <Heading size="3xl" mb="$12" textAlign="center" color="$amber500" fontFamily="Homemade Apple">React India Github Book</Heading>
+      <Grid>
+        {data && data.map((item: any) => (
+          <VStack
+            space="lg"
+            justifyContent="center"
+            alignItems="center"
+            w="350px"
+            bg="$amber50"
+            py="$12"
+            rounded={8}
+            borderWidth={2}
+            borderStyle="dashed"
+            borderColor="$amber400"
+          >
+            <Box overflow="hidden" borderRadius={"$full"} w="200px">
+              <img
+                src={item.githubAvatarUrl}
+                alt="Picture of the author"
+              />
+            </Box>
+            <Heading color="$amber400" fontFamily="Homemade Apple">
+              {item.name}
+            </Heading>
+            <Box w="100%" px="$8">
+              <Text color="$amber400" fontFamily="monospace">
+                Github: {item.githubId}
+              </Text>
+              {item.content ? <Text color="$amber400" fontFamily="Homemade Apple">
+                <Text color="$amber400" fontFamily="monospace" >Feelings:</Text> {item.content}
+              </Text> : <Text color="$amber400" fontFamily="Homemade Apple">
+                <Text color="$amber400" fontFamily="monospace" >Feelings:</Text> Too busy to share them :|
+              </Text>}
+              {item.emailId && <Text color="$amber400" fontFamily="Homemade Apple">
+                <Text color="$amber400" fontFamily="monospace" >You can reach me on:</Text> {item.emailId}
+              </Text>}
+            </Box>
+          </VStack>
+        ))}
+        {/* <Box w="350px" p="$10" bg="$amber400"></Box> */}
+      </Grid>
+    </Box>
   );
 };
 
 const Home: NextPage = () => {
+  let [data, setData] = useState([]);
+
+  useEffect(() => {
+    fetchUsers().then((data) => setData(data));
+  }, []);
   return (
-    <div className={styles.parent}>
+    <div>
       <Meta />
-      <Example />
+      <Container data={data} />
     </div>
   );
 };
